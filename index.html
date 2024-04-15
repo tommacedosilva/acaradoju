@@ -10,10 +10,13 @@
             font-family: "Avenir Black";
             src: url(./assets/fonts/Avenir-Black.ttf);
         }
-        body {
-            background-color: #11C5D9;
+        * {
             padding: 0;
             margin: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #11C5D9;
         }
         nav {
             display: flex;
@@ -22,18 +25,38 @@
         }
         nav img {
             width: 350px;
-            padding: 10px;
-        }
-        nav h3 {
-            color: #FFF;
-            font-family: "Avenir Black";
-        }
-        nav div {
-            padding: 10px;
+            padding-bottom: 10px;
         }
         nav p {
             text-align: right;
             font-family: "Avenir Black";
+            color: #FFF;
+            padding-right: 20px;
+        }
+        nav span {
+            color: #000;
+        }
+
+        .container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            height: 630px;
+            gap: 10px;
+        }
+
+        .container > div {
+            flex: 0 0 350px;
+            border-radius: 0.5rem;
+            transition: 0.5s ease-in-out;
+            cursor: pointer;
+            box-shadow: 1px 5px 15px #1e0e3e;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .container > div:nth-of-type(1) {
+            background: url("./assets/img/BANNERS/banner-ok_Prancheta\ 1.png") no-repeat 50% / cover;
         }
 
     </style>
@@ -41,17 +64,34 @@
 <body>
     <nav>
         <img src="./assets/img/SVG/COR-HORIZONTAL.svg" alt="logo A Cara do Ju">
-        <div>
-            <h3>A sua loja de camisetas de filmes e séries favoritas</h3>
-            <p>Estampas exclusivas feitas pelo Ju</p>
-        </div>
+        <p>A sua loja de camisetas de filmes e séries favoritas <br><span>Estampas exclusivas feitas pelo Ju</span></p>
     </nav>
-    <section>
-        <img src="./assets/img/BANNERS/banner-ok_Prancheta 1.png" alt="">
-        <img src="./assets/img/BANNERS/banner-ok_Prancheta 1.png" alt="">
-        <img src="./assets/img/BANNERS/banner-ok_Prancheta 1.png" alt="">
-        <img src="./assets/img/BANNERS/banner-ok_Prancheta 1.png" alt="">
-    </section>
+    <div class="container">
+        <div>
+            <div class="content">
+                <h2>Teste</h2>
+                <span>teste</span>
+            </div>
+        </div>
+        <div>
+            <div class="content">
+                <h2>Teste</h2>
+                <span>teste</span>
+            </div>
+        </div>
+        <div>
+            <div class="content">
+                <h2>Teste</h2>
+                <span>teste</span>
+            </div>
+        </div>
+        <div>
+            <div class="content">
+                <h2>Teste</h2>
+                <span>teste</span>
+            </div>
+        </div>
+    </div>
     <meta name="google-site-verification" content="eaoS5pQpYRVXegkfgoitzUmQTdwANFOQ2jFYE-nudbs" />
 
     <!-- Google tag (gtag.js) -->
